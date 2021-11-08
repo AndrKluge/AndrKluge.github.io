@@ -10,6 +10,8 @@ jobs:
   weekday_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: "Hello world when it's Monday"
         run: echo "Hello $FIRST_NAME $MIDDLE_NAME $LAST_NAME, today is Monday!"
         env:
